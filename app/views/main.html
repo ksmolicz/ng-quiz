@@ -1,0 +1,31 @@
+<div ng-if="!doneToday && appLoaded">
+
+  <div ng-if="!quizDone">
+    <h3><timer interval="1000">{{seconds}}</timer></h3>
+
+    <div ng-repeat="question in questions" ng-if="$index === currentQuestion">
+      <img src="{{question.image}}" alt=""/>
+      <p>{{question.question}}</p>
+      <div ng-repeat="answer in question.answers">
+
+        <input type="radio" ng-model="selectedAnswer[$parent.$index]" ng-value="$index">
+        {{answer.name}}
+
+      </div>
+      <button class="btn btn-default" ng-click="submitAnswer($index)">Dalej</button>
+    </div>
+  </div>
+
+  <div ng-if="quizDone">
+    <p>
+      Dziękujemy za wypełnienie quizu<br/>
+      Twój wynik to {{score}}<br/>
+      Twój czas to {{time.seconds}} sekund
+    </p>
+  </div>
+
+</div>
+
+<div ng-if="doneToday">
+  <p>Dzisiaj już rozwiązywałeś ten quiz, spróbuj ponownie jutro</p>
+</div>

@@ -1,0 +1,19 @@
+@import "variables";
+
+.settings{
+  .answer{
+    button{
+      width: 100%;
+      @media screen and (min-width: $break-small) {
+        position: relative;
+        top: 25px;
+      }
+    }
+    select{
+      @media screen and (min-width: $break-small) {
+        position: relative;
+        top: 25px;
+      }
+    }
+  }
+}

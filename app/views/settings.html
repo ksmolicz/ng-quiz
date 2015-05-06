@@ -1,0 +1,35 @@
+<form novalidate>
+  <div class="settings">
+    <div class="form-group">
+      <label for="question">Pytanie</label>
+      <input type="text" id="question" class="form-control" placeholder="Wpisz pytanie" ng-model="add.question">
+    </div>
+    <div class="row answer">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label class="control-label">Odpowiedź</label>
+          <input type="text" class="form-control" ng-model="add.answer" name="description" placeholder="Dodaj odpowiedź">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <select class="form-control"
+                  ng-init="add.isAnswer = selectAnswer[0].value"
+                  ng-options="item.value as item.label for item in selectAnswer"
+                  ng-model="add.isAnswer"></select>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <button class="btn btn-primary" ng-click="addAnswer()">Dodaj</button>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <p ng-repeat="item in answerArray">
+          {{$index + 1 + '. ' + item.name + ' ' + item.isAnswer}}
+        </p>
+      </div>
+    </div>
+    <button class="btn btn-primary pull-right" ng-click="addQuestion()">Dodaj pytanie do bazy</button>
+  </div>
+</form>
