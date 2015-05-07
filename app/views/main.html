@@ -12,20 +12,20 @@
         {{answer.name}}
 
       </div>
-      <button class="btn btn-default" ng-click="submitAnswer($index)">Dalej</button>
+      <button class="btn btn-default" ng-click="submitAnswer($index)">Next</button>
     </div>
   </div>
 
   <div ng-if="quizDone">
     <p>
-      Dziękujemy za wypełnienie quizu<br/>
-      Twój wynik to {{score}}<br/>
-      Twój czas to {{time.seconds}} sekund
+      Thank you for completing quiz<br/>
+      Your score is {{score}}<br/>
+      Your time is {{time.seconds}} seconds
     </p>
   </div>
 
 </div>
 
 <div ng-if="doneToday">
-  <p>Dzisiaj już rozwiązywałeś ten quiz, spróbuj ponownie jutro</p>
+  <p>You have already completed this quiz today, try again tomorrow</p>
 </div>

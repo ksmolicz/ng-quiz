@@ -6,8 +6,8 @@ angular.module('ngQuizApp')
     $scope.add = {};
     $scope.answerArray = [];
     $scope.selectAnswer = [
-      {label: 'Prawda', value: true},
-      {label: 'Fałsz', value: false}
+      {label: 'True', value: true},
+      {label: 'False', value: false}
     ];
 
     $scope.addAnswer = function(){

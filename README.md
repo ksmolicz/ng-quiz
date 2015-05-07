@@ -1,12 +1,18 @@
 # ng-quiz
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 1.0.0.
+Simple quiz app developed using AngularJS, Firebase, Bootstrap and Facebook.
+
+Features:
+*Facebook login
+*Timer
+*You can do quiz only once a day
+*Only best score is saved
+*Add question to firebase
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
+Preview: www.ksmolicz.pl/ng-quiz
 
-Running `grunt test` will run the unit tests with karma.
+
