@@ -13,6 +13,3 @@ Features:
 
 Run `grunt` for building and `grunt serve` for preview.
 
-Preview: www.ksmolicz.pl/ng-quiz
-
-
